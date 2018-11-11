@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF00FC37219893E800B98E4C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00FC36219893E800B98E4C /* Card.swift */; };
+		BF00FC3A219893F700B98E4C /* FlashcardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00FC39219893F700B98E4C /* FlashcardsModel.swift */; };
 		BF4B40DF2193BB20000F1744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4B40DE2193BB20000F1744 /* AppDelegate.swift */; };
 		BF4B40E12193BB20000F1744 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4B40E02193BB20000F1744 /* ViewController.swift */; };
 		BF4B40E42193BB20000F1744 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4B40E22193BB20000F1744 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF00FC36219893E800B98E4C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		BF00FC39219893F700B98E4C /* FlashcardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsModel.swift; sourceTree = "<group>"; };
 		BF4B40DB2193BB20000F1744 /* Flashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4B40DE2193BB20000F1744 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF4B40E02193BB20000F1744 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF00FC38219893EB00B98E4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF00FC39219893F700B98E4C /* FlashcardsModel.swift */,
+				BF00FC36219893E800B98E4C /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BF4B40D22193BB20000F1744 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +73,7 @@
 				BF4B40E52193BB21000F1744 /* Assets.xcassets */,
 				BF4B40E72193BB21000F1744 /* LaunchScreen.storyboard */,
 				BF4B40EA2193BB21000F1744 /* Info.plist */,
+				BF00FC38219893EB00B98E4C /* Model */,
 			);
 			path = Flashcards;
 			sourceTree = "<group>";
@@ -136,7 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4B40E12193BB20000F1744 /* ViewController.swift in Sources */,
+				BF00FC37219893E800B98E4C /* Card.swift in Sources */,
 				BF4B40DF2193BB20000F1744 /* AppDelegate.swift in Sources */,
+				BF00FC3A219893F700B98E4C /* FlashcardsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
