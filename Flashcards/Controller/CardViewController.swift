@@ -21,12 +21,13 @@ class CardViewController: UIViewController {
     @IBOutlet weak var btnWrong: UIButton!
     @IBOutlet weak var btnFlip: UIButton!
     @IBOutlet weak var btnCorrect: UIButton!
-    
+
+    var cards : [Card] = []
     var card : Card?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateView()
+        showNextCard()
     }
 
     fileprivate func updateView() {
@@ -37,6 +38,7 @@ class CardViewController: UIViewController {
         self.btnWrong.isHidden = side == .front
         self.btnFlip.isHidden = side == .back
         self.btnCorrect.isHidden = side == .front
+        self.navigationItem.title = "Noch \(self.cards.count + 1) Lernkarten"
     }
 
     @IBAction func flip() {
@@ -48,12 +50,26 @@ class CardViewController: UIViewController {
     }
 
     @IBAction func wrong() {
-        flip()
+        showNextCard()
     }
 
     @IBAction func correct() {
-        flip()
+        showNextCard()
     }
 
+    func showNextCard() {
+        // Nächste Lernkarte:
+        if let nextCard = cards.first {
+            cards.removeFirst()
+            self.card = nextCard
+            self.side = .front
+            updateView()
+        } else {
+            // Letzte Lernkarte:
+            // ViewController vom Navigations-Stapel entfernen
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
 }
 

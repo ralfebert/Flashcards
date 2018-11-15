@@ -12,7 +12,7 @@ class StartViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? CardViewController {
-            controller.card = FlashcardsModel.shared.cards.first
+            controller.cards = FlashcardsModel.shared.cards
         }
     }
     
