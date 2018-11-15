@@ -16,6 +16,7 @@
 		BF4B40E92193BB21000F1744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4B40E72193BB21000F1744 /* LaunchScreen.storyboard */; };
 		BF88D2BC219DEFF400B46910 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88D2BB219DEFF400B46910 /* StartViewController.swift */; };
 		BF88D2C0219DF41000B46910 /* FlashcardsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88D2BF219DF41000B46910 /* FlashcardsAPIClient.swift */; };
+		BF88D2C2219DF78100B46910 /* DownloadsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88D2C1219DF78100B46910 /* DownloadsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BF4B40EA2193BB21000F1744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF88D2BB219DEFF400B46910 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		BF88D2BF219DF41000B46910 /* FlashcardsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsAPIClient.swift; sourceTree = "<group>"; };
+		BF88D2C1219DF78100B46910 /* DownloadsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				BF88D2BB219DEFF400B46910 /* StartViewController.swift */,
 				BF4B40E02193BB20000F1744 /* CardViewController.swift */,
+				BF88D2C1219DF78100B46910 /* DownloadsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				BF88D2BC219DEFF400B46910 /* StartViewController.swift in Sources */,
 				BF4B40E12193BB20000F1744 /* CardViewController.swift in Sources */,
 				BF00FC37219893E800B98E4C /* Card.swift in Sources */,
+				BF88D2C2219DF78100B46910 /* DownloadsTableViewController.swift in Sources */,
 				BF4B40DF2193BB20000F1744 /* AppDelegate.swift in Sources */,
 				BF88D2C0219DF41000B46910 /* FlashcardsAPIClient.swift in Sources */,
 				BF00FC3A219893F700B98E4C /* FlashcardsModel.swift in Sources */,
