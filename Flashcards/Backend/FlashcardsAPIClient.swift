@@ -1,4 +1,10 @@
-struct SetDownload {
+import Foundation
+
+struct SetList : Codable {
+    var sets : [SetDownload]
+}
+
+struct SetDownload : Codable {
     var id : Int
     var title : String
     var term_count : Int
@@ -6,7 +12,7 @@ struct SetDownload {
 
 protocol FlashcardsAPIClient {
 
-    var allSets : [SetDownload] { get }
+    var allSets : SetList { get }
     func downloadSet(id: Int)
 
 }
@@ -14,10 +20,12 @@ protocol FlashcardsAPIClient {
 
 class DemoFlashcardsAPIClient : FlashcardsAPIClient {
 
-    var allSets: [SetDownload] = [
-        SetDownload(id: 1, title: "German/English: Common verbs", term_count: 50),
-        SetDownload(id: 2, title: "Spanish/English: Animals", term_count: 100)
-    ]
+    var allSets: SetList {
+        let url = URL(string: "https://www.ralfebert.de/flashcards/sets.json")!
+        let data = try! Data(contentsOf: url)
+        let json = try! JSONDecoder().decode(SetList.self, from: data)
+        return json
+    }
 
     func downloadSet(id: Int) {
         fatalError("Noch nicht implementiert")
