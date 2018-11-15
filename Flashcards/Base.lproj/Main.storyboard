@@ -55,21 +55,36 @@
                                 <rect key="frame" x="153" y="461" width="68" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn_flip"/>
+                                <connections>
+                                    <action selector="flip" destination="BYZ-38-t0r" eventType="touchUpInside" id="seI-20-90b"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eED-Et-85U">
                                 <rect key="frame" x="74" y="461" width="68" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn_wrong"/>
+                                <connections>
+                                    <action selector="wrong" destination="BYZ-38-t0r" eventType="touchUpInside" id="IBs-DF-aUk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnk-JO-EDI">
                                 <rect key="frame" x="232" y="461" width="68" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn_correct"/>
+                                <connections>
+                                    <action selector="correct" destination="BYZ-38-t0r" eventType="touchUpInside" id="cbf-lQ-Nwg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.94117647059999998" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnCorrect" destination="Jnk-JO-EDI" id="d3X-r0-Xuc"/>
+                        <outlet property="btnFlip" destination="3qL-wN-om5" id="NMd-fw-so9"/>
+                        <outlet property="btnWrong" destination="eED-Et-85U" id="PsH-Qp-Cwg"/>
+                        <outlet property="textLabel" destination="OFd-O5-Cgj" id="qw8-S5-JWx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

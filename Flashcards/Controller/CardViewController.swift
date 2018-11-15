@@ -10,18 +10,35 @@ import UIKit
 
 class CardViewController: UIViewController {
 
+    @IBOutlet weak var textLabel : UILabel!
+    @IBOutlet weak var btnWrong: UIButton!
+    @IBOutlet weak var btnFlip: UIButton!
+    @IBOutlet weak var btnCorrect: UIButton!
+    
     let card = FlashcardsModel.shared.cards[0]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad")
-        self.view.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
-        print("Aktuelle Lernkarte:", card.frontText, card.backText)
+        self.textLabel.text = card.frontText
+        self.btnWrong.isHidden = true
+        self.btnFlip.isHidden = false
+        self.btnCorrect.isHidden = true
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("viewWillAppear")
+    @IBAction func flip() {
+        self.textLabel.text = card.backText
+        self.btnWrong.isHidden = false
+        self.btnFlip.isHidden = true
+        self.btnCorrect.isHidden = false
     }
+
+    @IBAction func wrong() {
+        print("wrong")
+    }
+
+    @IBAction func correct() {
+        print("correct")
+    }
+
 }
 
