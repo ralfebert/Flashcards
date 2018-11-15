@@ -8,10 +8,18 @@
 
 import UIKit
 
+protocol DownloadsTableViewControllerDelegate {
+
+    func downloadFinished(terms : [Term])
+
+}
+
 class DownloadsTableViewController: UITableViewController {
 
     let backend = DemoFlashcardsAPIClient()
     var allSets = [SetDownload]()
+
+    var delegate : DownloadsTableViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +51,8 @@ class DownloadsTableViewController: UITableViewController {
         let set = allSets[indexPath.row]
         let termList = backend.downloadSet(id: set.id)
 
-        let alert = UIAlertController(title: "Download", message: "Kartenstapel mit \(termList.terms.count) Karten heruntergeladen.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        present(alert, animated: true)
+        self.delegate?.downloadFinished(terms: termList.terms)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
