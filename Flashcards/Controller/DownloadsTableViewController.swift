@@ -15,7 +15,7 @@ class DownloadsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.allSets = backend.allSets
+        self.allSets = backend.allSets.sets
     }
 
     // MARK: - Table view data source
@@ -41,8 +41,9 @@ class DownloadsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let set = allSets[indexPath.row]
-        let alert = UIAlertController(title: "Download", message: "Kartenstapel \(set.title) herunterladen.",
-            preferredStyle: .alert)
+        let termList = backend.downloadSet(id: set.id)
+
+        let alert = UIAlertController(title: "Download", message: "Kartenstapel mit \(termList.terms.count) Karten heruntergeladen.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
