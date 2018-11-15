@@ -10,34 +10,49 @@ import UIKit
 
 class CardViewController: UIViewController {
 
+    enum Side {
+        case front
+        case back
+    }
+
+    var side = Side.front
+
     @IBOutlet weak var textLabel : UILabel!
     @IBOutlet weak var btnWrong: UIButton!
     @IBOutlet weak var btnFlip: UIButton!
     @IBOutlet weak var btnCorrect: UIButton!
     
-    let card = FlashcardsModel.shared.cards[0]
+    let card = FlashcardsModel.shared.cards.first
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.textLabel.text = card.frontText
-        self.btnWrong.isHidden = true
-        self.btnFlip.isHidden = false
-        self.btnCorrect.isHidden = true
+        updateView()
+    }
+
+    fileprivate func updateView() {
+        switch(side) {
+        case .front: self.textLabel.text = card?.frontText
+        case .back: self.textLabel.text = card?.backText
+        }
+        self.btnWrong.isHidden = side == .front
+        self.btnFlip.isHidden = side == .back
+        self.btnCorrect.isHidden = side == .front
     }
 
     @IBAction func flip() {
-        self.textLabel.text = card.backText
-        self.btnWrong.isHidden = false
-        self.btnFlip.isHidden = true
-        self.btnCorrect.isHidden = false
+        switch(side) {
+        case .front: self.side = .back
+        case .back: self.side = .front
+        }
+        updateView()
     }
 
     @IBAction func wrong() {
-        print("wrong")
+        flip()
     }
 
     @IBAction func correct() {
-        print("correct")
+        flip()
     }
 
 }
