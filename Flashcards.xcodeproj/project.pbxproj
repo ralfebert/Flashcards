@@ -15,6 +15,7 @@
 		BF4B40E62193BB21000F1744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4B40E52193BB21000F1744 /* Assets.xcassets */; };
 		BF4B40E92193BB21000F1744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4B40E72193BB21000F1744 /* LaunchScreen.storyboard */; };
 		BF88D2BC219DEFF400B46910 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88D2BB219DEFF400B46910 /* StartViewController.swift */; };
+		BF88D2C0219DF41000B46910 /* FlashcardsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88D2BF219DF41000B46910 /* FlashcardsAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BF4B40E82193BB21000F1744 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF4B40EA2193BB21000F1744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF88D2BB219DEFF400B46910 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		BF88D2BF219DF41000B46910 /* FlashcardsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				BF4B40EA2193BB21000F1744 /* Info.plist */,
 				BF00FC38219893EB00B98E4C /* Model */,
 				BF88D2BA219DEA4200B46910 /* Controller */,
+				BF88D2BE219DF40500B46910 /* Backend */,
 			);
 			path = Flashcards;
 			sourceTree = "<group>";
@@ -87,6 +90,14 @@
 				BF4B40E02193BB20000F1744 /* CardViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF88D2BE219DF40500B46910 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				BF88D2BF219DF41000B46910 /* FlashcardsAPIClient.swift */,
+			);
+			path = Backend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 				BF4B40E12193BB20000F1744 /* CardViewController.swift in Sources */,
 				BF00FC37219893E800B98E4C /* Card.swift in Sources */,
 				BF4B40DF2193BB20000F1744 /* AppDelegate.swift in Sources */,
+				BF88D2C0219DF41000B46910 /* FlashcardsAPIClient.swift in Sources */,
 				BF00FC3A219893F700B98E4C /* FlashcardsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
