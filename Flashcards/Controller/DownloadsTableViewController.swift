@@ -11,7 +11,7 @@ import UIKit
 class DownloadsTableViewController: UITableViewController {
 
     let backend = DemoFlashcardsAPIClient()
-    var allSets = [String]()
+    var allSets = [SetDownload]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +31,8 @@ class DownloadsTableViewController: UITableViewController {
 
         let cellItem = allSets[indexPath.row]
 
-        cell.textLabel?.text = cellItem
-        cell.detailTextLabel?.text = "? Lernkarten"
+        cell.textLabel?.text = cellItem.title
+        cell.detailTextLabel?.text = "\(cellItem.term_count) Lernkarten"
 
         return cell
     }
@@ -41,7 +41,7 @@ class DownloadsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let set = allSets[indexPath.row]
-        let alert = UIAlertController(title: "Download", message: "Kartenstapel \(set) herunterladen.",
+        let alert = UIAlertController(title: "Download", message: "Kartenstapel \(set.title) herunterladen.",
             preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
