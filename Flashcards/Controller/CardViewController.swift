@@ -22,7 +22,7 @@ class CardViewController: UIViewController {
     @IBOutlet weak var btnFlip: UIButton!
     @IBOutlet weak var btnCorrect: UIButton!
     
-    let card = FlashcardsModel.shared.cards.first
+    var card : Card?
 
     override func viewDidLoad() {
         super.viewDidLoad()
