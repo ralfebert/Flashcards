@@ -33,11 +33,8 @@ class StartViewController: UIViewController, DownloadsTableViewControllerDelegat
     // MARK: - DownloadsTableViewControllerDelegate
 
     func downloadFinished(terms: [Term]) {
-        for term in terms {
-            let card = Card(frontText: term.term, backText: term.definition)
-            FlashcardsModel.shared.cards.append(card)
-        }
-        updateView()
+        let newCards = terms.map { Card(frontText: $0.term, backText: $0.definition) }
+        FlashcardsModel.shared.cards.append(contentsOf: newCards)
     }
     
 }
