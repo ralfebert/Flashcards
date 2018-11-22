@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF00FC37219893E800B98E4C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00FC36219893E800B98E4C /* Card.swift */; };
 		BF00FC3A219893F700B98E4C /* FlashcardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00FC39219893F700B98E4C /* FlashcardsModel.swift */; };
 		BF4B40DF2193BB20000F1744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4B40DE2193BB20000F1744 /* AppDelegate.swift */; };
 		BF4B40E12193BB20000F1744 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4B40E02193BB20000F1744 /* CardViewController.swift */; };
@@ -15,13 +14,15 @@
 		BF4B40E62193BB21000F1744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4B40E52193BB21000F1744 /* Assets.xcassets */; };
 		BF4B40E92193BB21000F1744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4B40E72193BB21000F1744 /* LaunchScreen.storyboard */; };
 		BF69038D21AD897800FEB30F /* RESTResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69038C21AD897800FEB30F /* RESTResource.swift */; };
+		BF69039321AD8E5500FEB30F /* Flashcards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF69038F21AD8E5500FEB30F /* Flashcards.xcdatamodeld */; };
+		BF69039421AD8E5500FEB30F /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69039121AD8E5500FEB30F /* Card+CoreDataClass.swift */; };
+		BF69039821AD8E6C00FEB30F /* NSPersistentContainer+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69039721AD8E6B00FEB30F /* NSPersistentContainer+Defaults.swift */; };
 		BF88D2BC219DEFF400B46910 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88D2BB219DEFF400B46910 /* StartViewController.swift */; };
 		BF88D2C0219DF41000B46910 /* FlashcardsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88D2BF219DF41000B46910 /* FlashcardsAPIClient.swift */; };
 		BF88D2C2219DF78100B46910 /* DownloadsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88D2C1219DF78100B46910 /* DownloadsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF00FC36219893E800B98E4C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		BF00FC39219893F700B98E4C /* FlashcardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsModel.swift; sourceTree = "<group>"; };
 		BF4B40DB2193BB20000F1744 /* Flashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4B40DE2193BB20000F1744 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +32,9 @@
 		BF4B40E82193BB21000F1744 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF4B40EA2193BB21000F1744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF69038C21AD897800FEB30F /* RESTResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTResource.swift; sourceTree = "<group>"; };
+		BF69039021AD8E5500FEB30F /* Flashcards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flashcards.xcdatamodel; sourceTree = "<group>"; };
+		BF69039121AD8E5500FEB30F /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BF69039721AD8E6B00FEB30F /* NSPersistentContainer+Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPersistentContainer+Defaults.swift"; sourceTree = "<group>"; };
 		BF88D2BB219DEFF400B46910 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		BF88D2BF219DF41000B46910 /* FlashcardsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsAPIClient.swift; sourceTree = "<group>"; };
 		BF88D2C1219DF78100B46910 /* DownloadsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsTableViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				BF00FC39219893F700B98E4C /* FlashcardsModel.swift */,
-				BF00FC36219893E800B98E4C /* Card.swift */,
+				BF69039121AD8E5500FEB30F /* Card+CoreDataClass.swift */,
+				BF69038F21AD8E5500FEB30F /* Flashcards.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				BF69038C21AD897800FEB30F /* RESTResource.swift */,
+				BF69039721AD8E6B00FEB30F /* NSPersistentContainer+Defaults.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -187,11 +193,13 @@
 			files = (
 				BF88D2BC219DEFF400B46910 /* StartViewController.swift in Sources */,
 				BF4B40E12193BB20000F1744 /* CardViewController.swift in Sources */,
-				BF00FC37219893E800B98E4C /* Card.swift in Sources */,
+				BF69039421AD8E5500FEB30F /* Card+CoreDataClass.swift in Sources */,
 				BF88D2C2219DF78100B46910 /* DownloadsTableViewController.swift in Sources */,
 				BF4B40DF2193BB20000F1744 /* AppDelegate.swift in Sources */,
 				BF88D2C0219DF41000B46910 /* FlashcardsAPIClient.swift in Sources */,
 				BF00FC3A219893F700B98E4C /* FlashcardsModel.swift in Sources */,
+				BF69039821AD8E6C00FEB30F /* NSPersistentContainer+Defaults.swift in Sources */,
+				BF69039321AD8E5500FEB30F /* Flashcards.xcdatamodeld in Sources */,
 				BF69038D21AD897800FEB30F /* RESTResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +398,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF69038F21AD8E5500FEB30F /* Flashcards.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF69039021AD8E5500FEB30F /* Flashcards.xcdatamodel */,
+			);
+			currentVersion = BF69039021AD8E5500FEB30F /* Flashcards.xcdatamodel */;
+			path = Flashcards.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BF4B40D32193BB20000F1744 /* Project object */;
 }
