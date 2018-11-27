@@ -25,26 +25,22 @@ struct Term : Codable {
 
 protocol FlashcardsAPIClient {
 
-    var allSets : SetList { get }
-    func downloadSet(id: Int) -> TermList
+    var allSets : RESTResource<SetList> { get }
+    func downloadSet(id: Int) -> RESTResource<TermList>
 
 }
 
 
-class DemoFlashcardsAPIClient : FlashcardsAPIClient {
+class URLFlashcardsAPIClient : FlashcardsAPIClient {
 
-    var allSets: SetList {
+    var allSets: RESTResource<SetList> {
         let url = URL(string: "https://www.ralfebert.de/flashcards/sets.json")!
-        let data = try! Data(contentsOf: url)
-        let json = try! JSONDecoder().decode(SetList.self, from: data)
-        return json
+        return RESTResource(url: url)
     }
 
-    func downloadSet(id : Int) -> TermList {
+    func downloadSet(id : Int) -> RESTResource<TermList> {
         let url = URL(string: "https://www.ralfebert.de/flashcards/\(id).json")!
-        let data = try! Data(contentsOf: url)
-        let json = try! JSONDecoder().decode(TermList.self, from: data)
-        return json
+        return RESTResource(url: url)
     }
 
 }

@@ -35,6 +35,7 @@ class StartViewController: UIViewController, DownloadsTableViewControllerDelegat
     func downloadFinished(terms: [Term]) {
         let newCards = terms.map { Card(frontText: $0.term, backText: $0.definition) }
         FlashcardsModel.shared.cards.append(contentsOf: newCards)
+        updateView()
     }
     
 }

@@ -16,14 +16,18 @@ protocol DownloadsTableViewControllerDelegate {
 
 class DownloadsTableViewController: UITableViewController {
 
-    let backend = DemoFlashcardsAPIClient()
+    let backend = URLFlashcardsAPIClient()
     var allSets = [SetDownload]()
 
     var delegate : DownloadsTableViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.allSets = backend.allSets.sets
+        let resource = backend.allSets
+        resource.addValueObserver(owner: self) { (result) in
+            self.allSets = result.sets
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
@@ -49,10 +53,13 @@ class DownloadsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let set = allSets[indexPath.row]
-        let termList = backend.downloadSet(id: set.id)
+        let resource = backend.downloadSet(id: set.id)
 
-        self.delegate?.downloadFinished(terms: termList.terms)
-        self.navigationController?.popViewController(animated: true)
+        resource.addValueObserver(owner: self) { (result) in
+            self.delegate?.downloadFinished(terms: result.terms)
+            self.navigationController?.popViewController(animated: true)
+        }
+
     }
     
 }
