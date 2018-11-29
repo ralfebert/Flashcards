@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 protocol DownloadsTableViewControllerDelegate {
 
@@ -24,6 +25,14 @@ class DownloadsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let resource = backend.allSets
+        resource.addStateObserver(owner: self) { (state) in
+            switch(state) {
+            case .loading:
+                MBProgressHUD.showAdded(to: self.view, animated: true)
+            default:
+                MBProgressHUD.hide(for: self.view, animated: true)
+            }
+        }
         resource.addValueObserver(owner: self) { (result) in
             self.allSets = result.sets
             self.tableView.reloadData()
