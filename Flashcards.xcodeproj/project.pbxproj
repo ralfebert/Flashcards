@@ -20,6 +20,9 @@
 		BF69039821AD8E6C00FEB30F /* NSPersistentContainer+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69039721AD8E6B00FEB30F /* NSPersistentContainer+Defaults.swift */; };
 		BF6903DB21B0213E00FEB30F /* FlashcardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6903DA21B0213E00FEB30F /* FlashcardsTests.swift */; };
 		BF6903E921B024F700FEB30F /* FlashcardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6903E821B024F700FEB30F /* FlashcardsUITests.swift */; };
+		BF6903F121B03AA100FEB30F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6903F021B03AA100FEB30F /* StoreKit.framework */; };
+		BF6903F321B03CF100FEB30F /* FlashcardStoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6903F221B03CF100FEB30F /* FlashcardStoreTableViewController.swift */; };
+		BF6903F621B03DAA00FEB30F /* FlashcardsPurchaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6903F521B03DAA00FEB30F /* FlashcardsPurchaseHandler.swift */; };
 		BF88D2BC219DEFF400B46910 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88D2BB219DEFF400B46910 /* StartViewController.swift */; };
 		BF88D2C0219DF41000B46910 /* FlashcardsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88D2BF219DF41000B46910 /* FlashcardsAPIClient.swift */; };
 		BF88D2C2219DF78100B46910 /* DownloadsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88D2C1219DF78100B46910 /* DownloadsTableViewController.swift */; };
@@ -66,6 +69,9 @@
 		BF6903E621B024F700FEB30F /* FlashcardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashcardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6903E821B024F700FEB30F /* FlashcardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsUITests.swift; sourceTree = "<group>"; };
 		BF6903EA21B024F700FEB30F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF6903F021B03AA100FEB30F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BF6903F221B03CF100FEB30F /* FlashcardStoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardStoreTableViewController.swift; sourceTree = "<group>"; };
+		BF6903F521B03DAA00FEB30F /* FlashcardsPurchaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsPurchaseHandler.swift; sourceTree = "<group>"; };
 		BF88D2BB219DEFF400B46910 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		BF88D2BF219DF41000B46910 /* FlashcardsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsAPIClient.swift; sourceTree = "<group>"; };
 		BF88D2C1219DF78100B46910 /* DownloadsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsTableViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA30EB94441761E0EDE1E4DA /* Pods_Flashcards.framework in Frameworks */,
+				BF6903F121B03AA100FEB30F /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +169,7 @@
 				BF00FC38219893EB00B98E4C /* Model */,
 				BF88D2BA219DEA4200B46910 /* Controller */,
 				BF88D2BE219DF40500B46910 /* Backend */,
+				BF6903F421B03D9D00FEB30F /* Store */,
 				BF88D2C5219EFDBE00B46910 /* Helper */,
 			);
 			path = Flashcards;
@@ -183,6 +191,15 @@
 				BF6903EA21B024F700FEB30F /* Info.plist */,
 			);
 			path = FlashcardsUITests;
+			sourceTree = "<group>";
+		};
+		BF6903F421B03D9D00FEB30F /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				BF6903F221B03CF100FEB30F /* FlashcardStoreTableViewController.swift */,
+				BF6903F521B03DAA00FEB30F /* FlashcardsPurchaseHandler.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		BF88D2BA219DEA4200B46910 /* Controller */ = {
@@ -215,6 +232,7 @@
 		DF8404E78DE9897D1F8D06B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF6903F021B03AA100FEB30F /* StoreKit.framework */,
 				7EB603EF6153B7567AC570B4 /* Pods_Flashcards.framework */,
 				C749C5A10A4F83B46B74C7F8 /* Pods_FlashcardsTests.framework */,
 				E918CD6068407C703F42AF28 /* Pods_FlashcardsUITests.framework */,
@@ -294,6 +312,11 @@
 				TargetAttributes = {
 					BF4B40DA2193BB20000F1744 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					BF6903D721B0213E00FEB30F = {
 						CreatedOnToolsVersion = 10.1;
@@ -433,10 +456,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF88D2BC219DEFF400B46910 /* StartViewController.swift in Sources */,
+				BF6903F621B03DAA00FEB30F /* FlashcardsPurchaseHandler.swift in Sources */,
 				BF4B40E12193BB20000F1744 /* CardViewController.swift in Sources */,
 				BF69039421AD8E5500FEB30F /* Card+CoreDataClass.swift in Sources */,
 				BF88D2C2219DF78100B46910 /* DownloadsTableViewController.swift in Sources */,
 				BF4B40DF2193BB20000F1744 /* AppDelegate.swift in Sources */,
+				BF6903F321B03CF100FEB30F /* FlashcardStoreTableViewController.swift in Sources */,
 				BF88D2C0219DF41000B46910 /* FlashcardsAPIClient.swift in Sources */,
 				BF00FC3A219893F700B98E4C /* FlashcardsModel.swift in Sources */,
 				BF69039821AD8E6C00FEB30F /* NSPersistentContainer+Defaults.swift in Sources */,

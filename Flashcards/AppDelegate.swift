@@ -13,11 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let purchaseHandler = FlashcardsPurchaseHandler()
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         if ProcessInfo.processInfo.arguments.contains("--clear") {
             FlashcardsModel.shared.clear()
         }
+
+        purchaseHandler.register()
 
         return true
     }

@@ -23,8 +23,17 @@ class FlashcardsModel {
         return try! self.viewContext.fetch(fetchRequest)
     }
 
+    @discardableResult
     func createCard() -> Card {
         return NSEntityDescription.insertNewObject(forEntityName: Card.entityName, into: self.viewContext) as! Card
+    }
+
+    @discardableResult
+    func createCard(frontText : String, backText : String) -> Card {
+        let card = self.createCard()
+        card.frontText = frontText
+        card.backText = backText
+        return card
     }
 
     func clear() {
