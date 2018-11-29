@@ -10,6 +10,10 @@ class FlashcardsModel {
         self.persistentContainer = NSPersistentContainer(defaultContainerWithName: "Flashcards")
     }
 
+    init(persistentContainer : NSPersistentContainer) {
+        self.persistentContainer = persistentContainer
+    }
+
     private var viewContext : NSManagedObjectContext {
         return self.persistentContainer.viewContext
     }
