@@ -27,6 +27,11 @@ class FlashcardsModel {
         return NSEntityDescription.insertNewObject(forEntityName: Card.entityName, into: self.viewContext) as! Card
     }
 
+    func clear() {
+        self.cards.forEach(self.viewContext.delete)
+        save()
+    }
+    
     func save() {
         try! self.viewContext.save()
     }
