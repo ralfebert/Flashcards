@@ -1,0 +1,30 @@
+/* Class = "UIButton"; accessibilityLabel = "Show answer"; ObjectID = "3qL-wN-om5"; */
+"3qL-wN-om5.accessibilityLabel" = "Antwort zeigen";
+
+/* Class = "UINavigationItem"; title = "Store"; ObjectID = "6Rh-Gk-a2b"; */
+"6Rh-Gk-a2b.title" = "Kaufen";
+
+/* Class = "UINavigationItem"; title = "Flashcards"; ObjectID = "7d0-pk-khu"; */
+"7d0-pk-khu.title" = "Flashcards";
+
+/* Class = "UIButton"; accessibilityLabel = "Incorrect"; ObjectID = "eED-Et-85U"; */
+"eED-Et-85U.accessibilityLabel" = "Inkorrekt";
+
+/* Class = "UIButton"; normalTitle = "Learn … Cards"; ObjectID = "HLK-j6-Zd6"; */
+"HLK-j6-Zd6.normalTitle" = "… Karten lernen";
+
+/* Class = "UIButton"; accessibilityLabel = "Correct"; ObjectID = "Jnk-JO-EDI"; */
+"Jnk-JO-EDI.accessibilityLabel" = "Korrekt";
+
+/* Class = "UILabel"; text = "Free Flashcard Decks"; ObjectID = "qEI-eb-Bh4"; */
+"qEI-eb-Bh4.text" = "Kostenfreie Kartenstapel";
+
+/* Class = "UINavigationItem"; title = "Free Flashcard Decks"; ObjectID = "tTN-UI-eUl"; */
+"tTN-UI-eUl.title" = "Kostenfreie Kartenstapel";
+
+/* Class = "UILabel"; text = "Store"; ObjectID = "wOR-jH-Tio"; */
+"wOR-jH-Tio.text" = "Kaufen";
+
+/* Class = "UIBarButtonItem"; title = "Restore Purchases"; ObjectID = "yMN-Gx-1rb"; */
+"yMN-Gx-1rb.title" = "Käufe wiederherstellen";
+

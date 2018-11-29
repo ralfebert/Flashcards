@@ -14,15 +14,16 @@ class FlashcardsUITests: XCTestCase {
         continueAfterFailure = false
 
         let app = XCUIApplication()
-        app.launchArguments = ["--clear"]
+        app.launchArguments = ["--clear", "-AppleLocale", "de_DE", "-AppleLanguages", "(de)"]
         app.launch()
     }
 
     func testFlashcardDownload() {
 
         let app = XCUIApplication()
-        app.navigationBars.buttons["Add"].tap()
+        app.navigationBars.buttons["Hinzufügen"].tap()
 
+        app.tables.staticTexts["Kostenfreie Kartenstapel"].tap()
         app.tables.staticTexts["Say Hello Around the World"].tap()
 
         app.buttons["3 Karten lernen"].tap()

@@ -68,7 +68,9 @@ class CardViewController: UIViewController {
     }
 
     private func updateNavigationItem() {
-        self.navigationItem.title = "Noch \(self.cards.count + 1) Lernkarten"
+        var title = NSLocalizedString("CardTitle", value:"{count} cards remaining", comment:"Placeholders {count}")
+        title = title.replacingOccurrences(of: "{count}", with: String(self.cards.count + 1))
+        self.navigationItem.title = title
     }
 
     @IBAction func flip() {

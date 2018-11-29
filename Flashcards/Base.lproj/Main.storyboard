@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Start View Controller-->
+        <!--Flashcards-->
         <scene sceneID="LYq-hw-r7S">
             <objects>
                 <viewController id="ijn-iD-mUB" customClass="StartViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,22 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLK-j6-Zd6">
-                                <rect key="frame" x="120" y="318" width="134" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Kartenstapel lernen"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLK-j6-Zd6">
+                                <rect key="frame" x="138" y="318.5" width="99" height="30"/>
+                                <state key="normal" title="Learn … Cards"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="2h7-25-p3P"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HLK-j6-Zd6" firstAttribute="centerY" secondItem="qdi-oG-cBc" secondAttribute="centerY" id="T4P-Fx-jU4"/>
+                            <constraint firstItem="HLK-j6-Zd6" firstAttribute="centerX" secondItem="qdi-oG-cBc" secondAttribute="centerX" id="dIk-x6-kM3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Gay-31-g4h"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hrg-lx-mHD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mnh-VR-w0p">
+                    <navigationItem key="navigationItem" title="Flashcards" id="7d0-pk-khu">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="068-ie-fhZ">
                             <connections>
-                                <segue destination="P5a-jT-tx5" kind="show" id="yWc-4Q-UKQ"/>
+                                <segue destination="P5a-jT-tx5" kind="show" id="d0d-Lg-v5U"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -63,7 +66,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Kostenfreie Kartenstapel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qEI-eb-Bh4">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Free Flashcard Decks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qEI-eb-Bh4">
                                                     <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -109,7 +112,7 @@
             </objects>
             <point key="canvasLocation" x="1230" y="-82"/>
         </scene>
-        <!--Kostenfreie Kartenstapel-->
+        <!--Free Flashcard Decks-->
         <scene sceneID="LL8-1o-Mb1">
             <objects>
                 <tableViewController id="Lc2-Qp-OgS" customClass="DownloadsTableViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
@@ -125,14 +128,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sVO-pk-iUp">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sVO-pk-iUp">
                                             <rect key="frame" x="51" y="9" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X4q-kK-ra7">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X4q-kK-ra7">
                                             <rect key="frame" x="51" y="32.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -152,7 +155,7 @@
                             <outlet property="delegate" destination="Lc2-Qp-OgS" id="d7n-tu-ISJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Kostenfreie Kartenstapel" id="tTN-UI-eUl"/>
+                    <navigationItem key="navigationItem" title="Free Flashcard Decks" id="tTN-UI-eUl"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSo-gx-4Y7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,7 +169,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lernkarte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFd-O5-Cgj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFd-O5-Cgj">
                                 <rect key="frame" x="50" y="139" width="275" height="222.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -178,7 +181,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qL-wN-om5">
                                 <rect key="frame" x="153.5" y="538" width="68" height="69"/>
-                                <accessibility key="accessibilityConfiguration" label="Antwort zeigen"/>
+                                <accessibility key="accessibilityConfiguration" label="Show answer"/>
                                 <state key="normal" image="btn_flip"/>
                                 <connections>
                                     <action selector="flip" destination="BYZ-38-t0r" eventType="touchUpInside" id="seI-20-90b"/>
@@ -186,7 +189,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eED-Et-85U">
                                 <rect key="frame" x="65.5" y="538" width="68" height="69"/>
-                                <accessibility key="accessibilityConfiguration" label="Inkorrekt"/>
+                                <accessibility key="accessibilityConfiguration" label="Incorrect"/>
                                 <state key="normal" image="btn_wrong"/>
                                 <connections>
                                     <action selector="wrong" destination="BYZ-38-t0r" eventType="touchUpInside" id="IBs-DF-aUk"/>
@@ -194,7 +197,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnk-JO-EDI">
                                 <rect key="frame" x="241.5" y="538" width="68" height="69"/>
-                                <accessibility key="accessibilityConfiguration" label="Korrekt"/>
+                                <accessibility key="accessibilityConfiguration" label="Correct"/>
                                 <state key="normal" image="btn_correct"/>
                                 <connections>
                                     <action selector="correct" destination="BYZ-38-t0r" eventType="touchUpInside" id="cbf-lQ-Nwg"/>
@@ -260,14 +263,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0RJ-pg-X1A">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0RJ-pg-X1A">
                                             <rect key="frame" x="51" y="9" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Av2-6u-lh2">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Av2-6u-lh2">
                                             <rect key="frame" x="51" y="32.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>

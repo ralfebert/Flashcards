@@ -23,6 +23,7 @@
 		BF6903F121B03AA100FEB30F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6903F021B03AA100FEB30F /* StoreKit.framework */; };
 		BF6903F321B03CF100FEB30F /* FlashcardStoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6903F221B03CF100FEB30F /* FlashcardStoreTableViewController.swift */; };
 		BF6903F621B03DAA00FEB30F /* FlashcardsPurchaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6903F521B03DAA00FEB30F /* FlashcardsPurchaseHandler.swift */; };
+		BF6903FF21B0461100FEB30F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF6903FD21B0461100FEB30F /* Localizable.strings */; };
 		BF88D2BC219DEFF400B46910 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88D2BB219DEFF400B46910 /* StartViewController.swift */; };
 		BF88D2C0219DF41000B46910 /* FlashcardsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88D2BF219DF41000B46910 /* FlashcardsAPIClient.swift */; };
 		BF88D2C2219DF78100B46910 /* DownloadsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88D2C1219DF78100B46910 /* DownloadsTableViewController.swift */; };
@@ -56,7 +57,6 @@
 		BF4B40E02193BB20000F1744 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		BF4B40E32193BB20000F1744 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF4B40E52193BB21000F1744 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BF4B40E82193BB21000F1744 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF4B40EA2193BB21000F1744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF69038C21AD897800FEB30F /* RESTResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTResource.swift; sourceTree = "<group>"; };
 		BF69039021AD8E5500FEB30F /* Flashcards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flashcards.xcdatamodel; sourceTree = "<group>"; };
@@ -72,6 +72,10 @@
 		BF6903F021B03AA100FEB30F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BF6903F221B03CF100FEB30F /* FlashcardStoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardStoreTableViewController.swift; sourceTree = "<group>"; };
 		BF6903F521B03DAA00FEB30F /* FlashcardsPurchaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsPurchaseHandler.swift; sourceTree = "<group>"; };
+		BF6903F721B0447900FEB30F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		BF6903FA21B0448D00FEB30F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF6903FC21B044A100FEB30F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		BF6903FE21B0461100FEB30F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF88D2BB219DEFF400B46910 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		BF88D2BF219DF41000B46910 /* FlashcardsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsAPIClient.swift; sourceTree = "<group>"; };
 		BF88D2C1219DF78100B46910 /* DownloadsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsTableViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				BF4B40E52193BB21000F1744 /* Assets.xcassets */,
 				BF4B40E72193BB21000F1744 /* LaunchScreen.storyboard */,
 				BF4B40EA2193BB21000F1744 /* Info.plist */,
+				BF6903FD21B0461100FEB30F /* Localizable.strings */,
 				BF00FC38219893EB00B98E4C /* Model */,
 				BF88D2BA219DEA4200B46910 /* Controller */,
 				BF88D2BE219DF40500B46910 /* Backend */,
@@ -335,6 +340,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = BF4B40D22193BB20000F1744;
 			productRefGroup = BF4B40DC2193BB20000F1744 /* Products */;
@@ -354,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4B40E92193BB21000F1744 /* LaunchScreen.storyboard in Resources */,
+				BF6903FF21B0461100FEB30F /* Localizable.strings in Resources */,
 				BF4B40E62193BB21000F1744 /* Assets.xcassets in Resources */,
 				BF4B40E42193BB20000F1744 /* Main.storyboard in Resources */,
 			);
@@ -506,6 +513,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BF4B40E32193BB20000F1744 /* Base */,
+				BF6903F721B0447900FEB30F /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -513,9 +521,18 @@
 		BF4B40E72193BB21000F1744 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BF4B40E82193BB21000F1744 /* Base */,
+				BF6903FA21B0448D00FEB30F /* Base */,
+				BF6903FC21B044A100FEB30F /* de */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BF6903FD21B0461100FEB30F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF6903FE21B0461100FEB30F /* de */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -525,6 +542,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -586,6 +604,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -9,18 +9,10 @@
 import UIKit
 import MBProgressHUD
 
-protocol DownloadsTableViewControllerDelegate {
-
-    func downloadFinished(terms : [Term])
-
-}
-
 class DownloadsTableViewController: UITableViewController {
 
     let backend = URLFlashcardsAPIClient()
     var allSets = [SetDownload]()
-
-    var delegate : DownloadsTableViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,8 +57,11 @@ class DownloadsTableViewController: UITableViewController {
         let resource = backend.downloadSet(id: set.id)
 
         resource.addValueObserver(owner: self) { (result) in
-            self.delegate?.downloadFinished(terms: result.terms)
-            self.navigationController?.popViewController(animated: true)
+            for term in result.terms {
+                FlashcardsModel.shared.createCard(frontText: term.term, backText: term.definition)
+            }
+            FlashcardsModel.shared.save()
+            self.navigationController?.popToRootViewController(animated: true)
         }
 
     }
